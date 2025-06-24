@@ -3,24 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --primary-color: #ff0000;
-    --secondary-color: #2d2d2d;
-    --text-color: #fff;
+:root {
+  --primary-color: #800020;     /* Bordô tradicional */
+  --secondary-color: #1C1C1C;   /* Preto grafite */
+  --terciary-color: #2F2F2F;    /* Cinza médio-escuro */
+  --text-color: #EFEFEF;        /* Branco levemente opaco */
 }
 
+
 body{
-    height: 100vh;
+    background-color: var(--terciary-color);
+    
 }
 /* Design da logo  */
 header p{
     font-size: 28px;
     font-weight: 500;
     color: var(--primary-color);
-   -webkit-text-stroke: 1px #ff000089;
+   -webkit-text-stroke: 1px var(--primary-color);
    
 
 }
+
+.logo{
+    text-decoration: none;
+}
+.logo h2{
+    color: var(--text-color);
+    transition: .5s;
+    font-size: 32px;
+}
+.logo h2:hover{
+    color: var(--primary-color);
+}
+
+
+
 
 header p:hover{
    -webkit-text-stroke: 1px var(--primary-color);
@@ -29,17 +47,17 @@ header p:hover{
 /* Fim do Design do logo */
 
 /* designer do texto das opções do menu */
-a{
+a#nav{
     display: inline-block;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-style: bold;
     
     
 }
-
-a:hover{
+ 
+a#nav:hover{
     opacity: 1;
     color: var(--primary-color);
    -webkit-text-stroke: 0.5px var(--primary-color);
@@ -55,25 +73,29 @@ header{
     box-sizing: border-box;
     /* box-shadow: 0px 0px 10px #ff0000; */
 }
-header .Nexus-Contact button{
+
+.Nexus-Contact button{
     padding: 10px 25px;
     font-size: 18px;
     font-weight: 600;
-    border: 0;
+    border: 1px solid var(--primary-color);
     color: var(--text-color);
     background-color: var(--primary-color);
     border-radius: 30px;
     cursor: pointer;
+    
 }
-header .Nexus-Contact button:hover{
+.Nexus-Contact button:hover{
     box-shadow: 0px 0px 5px var(--primary-color);
 }
+
+
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #2d2d2d;
+    background-color: var(--secondary-color);
     height: 10vh;
 
 }
@@ -100,7 +122,7 @@ nav{
     position: relative;
     width: 32px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--text-color);
     margin: 8px;
     transition: 0.3s;
 
@@ -110,13 +132,17 @@ nav{
     body{
         overflow-x: hidden;
     }
+    header{
+        width: 100%;
+        height: auto;
+    }
     .nav-list {
-        position: absolute;
+        position: fixed;
         top: 8vh;
         right: 0;
         width: 40vw;
         height: 92vh;
-        background-color: #2d2d2d;
+        background-color: var(--secondary-color);
         flex-direction: column;;
         margin-top: 2vh;
         padding-left: 20vh;
@@ -125,6 +151,7 @@ nav{
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         /* border: #ff0000 1px solid; */
+        
     }
     .nav-list li{
         margin-left: 0;
@@ -163,7 +190,149 @@ nav{
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
-main{
-    background-color: #2d2d2d85;
+
+/* programações do section home */
+.home{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    padding: 0 0vh 0 20vh;
 }
+.home-conteudo{
+    max-width: 600px;
+    /* border: yellowgreen solid 1px; */
+} 
+.home-conteudo h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.home-conteudo h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.home-conteudo p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-conteudo .btn-caixa{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-caixa a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-caixa a:hover{
+    color: var(--primary-color);
+}
+    .btn-caixa a:nth-child(2){
+        background: transparent;
+        color: var(--primary-color);
+    }
+    .btn-caixa a:nth-child(2):hover{
+        color:var(--secondary-color);
+    }
+    .btn-caixa a:nth-child(2)::before{
+        background-color: var(--primary-color);
+    }
+
+    .btn-caixa a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: var(--terciary-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    .btn-caixa a:hover::before{
+        width: 100%;
+
+    }
+/* Fim do section home */
+    .home-sci{
+        position: absolute;
+        bottom: 40px;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home-sci a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid var(--primary-color);
+        border-radius: 50%;
+        font-size: 20px;
+        color: var(--primary-color);
+        text-decoration: none;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+        
+    }
+    .home-sci a:hover{
+        color: var(--terciary-color);
+    }
+    .home-sci a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--primary-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    .home-sci a:hover::before {
+        width: 100%;
+    }
+
+
+    .user-foto{
+        display: flex;
+        background-image: url(image\ teste-quadrada.JPG);
+        background-size: cover;
+        border-radius: 0 0 0 0 ;
+        width: 100vh;
+        height: 80vh;
+        margin: 20vh 10vh 10vh 10vh;
+        justify-content: center;
+        /* border: #ff0000 solid 1px; */
+    }
+
+ 
+  
+
