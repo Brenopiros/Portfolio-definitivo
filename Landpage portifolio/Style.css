@@ -128,43 +128,6 @@ nav{
 
 }
 
-@media (max-width: 1000px){
-    body{
-        overflow-x: hidden;
-    }
-    header{
-        width: 100%;
-        height: auto;
-    }
-    .nav-list {
-        position: fixed;
-        top: 8vh;
-        right: 0;
-        width: 40vw;
-        height: 92vh;
-        background-color: var(--secondary-color);
-        flex-direction: column;;
-        margin-top: 2vh;
-        padding-left: 20vh;
-        padding-bottom: 20vh;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        /* border: #ff0000 1px solid; */
-        
-    }
-    .nav-list li{
-        margin-left: 0;
-        opacity: 0;
-        /* border: 1px solid red; */
-        align-self: flex-start; 
-        text-align: left;  
-    }
-    .menu-sample{
-        display: block;
-    }
-}
-
 .nav-list.active{
     transform: translateX(0);
 }
@@ -326,13 +289,135 @@ nav{
         background-image: url(image\ teste-quadrada.JPG);
         background-size: cover;
         border-radius: 0 0 0 0 ;
-        width: 100vh;
-        height: 80vh;
+        width: 80vh;
+        height: 70vh;
         margin: 20vh 10vh 10vh 10vh;
+        padding: 10vh 10vh 0vh 25vh ;
         justify-content: center;
         /* border: #ff0000 solid 1px; */
     }
 
- 
-  
+    @media (max-width: 1100px){
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        width: 100%;
+        height: auto;
+    }
+    .nav-list {
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background-color: var(--secondary-color);
+        flex-direction: column;;
+        margin-top: 2vh;
+        padding-left: 20vh;
+        padding-bottom: 20vh;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        /* border: #ff0000 1px solid; */
+        
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+        /* border: 1px solid red; */
+        align-self: flex-start; 
+        text-align: left;  
+    }
+    .menu-sample{
+        display: block;
+    }
+
+     .user-foto{
+        display: flex;
+        background-image: url(image\ teste-quadrada.JPG);
+        background-size:cover;
+        border-radius: 0 0 0 0 ;
+        width: 100%;
+        height: 50%;
+        margin: 20vh 10vh 20vh 10vh;
+        padding: 10vh 10vh 0vh 25vh ;
+        border: #ff0000 solid 1px;
+    }
+
+  .btn-caixa a {
+    position: static;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+    transition: none !important;
+    z-index: auto;
+    overflow: visible;
+  }
+
+  .btn-caixa a:hover {
+    color: var(--secondary-color);
+  }
+
+  .btn-caixa a::before {
+    display: none;
+    content: none;
+  }
+
+  .btn-caixa a:hover::before {
+    width: 0;
+  }
+
+  /* Botão 2: Let Style */
+  .btn-caixa a:nth-child(2) {
+    background: transparent !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important; /* ✅ Borda vermelha restaurada */
+  }
+
+  .btn-caixa a:nth-child(2):hover {
+    color: var(--primary-color) !important;
+  }
+
+  .btn-caixa a:nth-child(2)::before {
+    display: none;
+  }
+
+  .home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+
+    /* REMOVIDO */
+    transition: none !important;
+  }
+
+  .home-sci a:hover {
+    /* REMOVE efeito de hover */
+    color: var(--primary-color) !important;
+  }
+
+  .home-sci a::before {
+    /* REMOVE o fundo animado */
+    content: none !important;
+    display: none !important;
+  }
+
+  .home-sci a:hover::before {
+    width: 0 !important;
+  }
+
+
+}
 
