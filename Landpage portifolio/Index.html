@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
     <title>Portfolio</title>
 </head>
 <body>
@@ -50,6 +56,135 @@
         <div class="user-foto"></div>
     </section>
 
+    <div class="title-project-box">
+        <h1 class="title-project">Projects</h1>
+        <p class="description-project">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis alias quam dolor quo est? Id fugit velit dicta nemo consequuntur dolorem obcaecati eligendi nostrum, reiciendis recusandae modi vel! Repudiandae vitae illo eaque eveniet reiciendis suscipit qui expedita nihil neque sed quia, ut dolorem consequuntur, facere eos minima laborum magni fuga esse harum tempore beatae nemo nesciunt. Temporibus quidem excepturi doloremque ipsum quae ullam fugiat nam assumenda unde recusandae hic quia voluptas aliquid odit sunt iure, vero fuga quas tempore optio magni. Corporis reprehenderit rerum harum voluptas iure veniam laborum corrupti minus. Sequi quod quis iure provident expedita nesciunt consequatur nam?</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+        <!--Slide 1-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/1.webp" />
+        </div>
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 1° Project </strong></div>
+        </a>
+        </div>
+
+        <!--Slide 2-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 2° Project </strong></div>
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/2.jpg" />
+        </div>
+        
+        </a>
+        </div>
+
+         <!--Slide 3-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/3.jpg" />
+        </div>
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 3° Project </strong></div>
+        </a>
+        </div>
+
+         <!--Slide 4-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 4° Project </strong></div>
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/4.jpg" />
+        </div>
+        
+        </a>
+        </div>
+
+         <!--Slide 5-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/5.jpg" />
+        </div>
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 5° Project </strong></div>
+        </a>
+        </div>
+
+        <!--Slide 6-->
+        <div class="swiper-slide">
+        <!-- Box slide show project -->
+        <a href="#" class="slider-project-box">
+        <!-- text in box -->
+        <div class="slider-project-text">
+        <strong> The 6° Project </strong></div>
+        <!-- Project img -->
+        <div class="slider-project-img">
+        <img src="images/6.jpg" />
+        </div>
+        </a>
+        </div>
+        
+
+        </div><!--wrapper-end-->
+        <div class="swiper-pagination"></div>
+        </div><!--swiper-end-->
+    
+
     <script src="Script.js"></script>
+        <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 1,
+         spaceBetween: 10,
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         breakpoints: {
+           560: {
+             slidesPerView: 2,
+             spaceBetween: 10,
+           },
+           900: {
+             slidesPerView: 3,
+             spaceBetween: 10,
+           },
+           1300: {
+             slidesPerView: 4,
+             spaceBetween: 10,
+           },
+         },
+       });
+     </script>
 </body>
 </html>
