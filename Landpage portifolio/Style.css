@@ -497,3 +497,9 @@ a{
     background-color: var(--text-color) !important;
 }
 
+@media(max-width:600px){
+    .slider-img{
+        height: 500px;
+    }
+}
+
