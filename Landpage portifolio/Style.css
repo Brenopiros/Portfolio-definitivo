@@ -76,7 +76,7 @@ header{
     /* box-shadow: 0px 0px 10px #ff0000; */
 }
 
-.Nexus-Contact button{
+.Breno-Contact button{
     padding: 10px 25px;
     font-size: 18px;
     font-weight: 600;
@@ -421,6 +421,91 @@ nav{
 
 /* Fim da responsividade home e header */
 
+.about{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5vh 0 0;
+    /* border: 1px solid red; */
+}
+.about-conteudo{
+    max-width: 600px;
+    /* border: 1px solid purple; */
+}
+
+.user-foto-about{
+    display: flex;
+    background-image: url(image\ teste-quadrada.JPG);
+    background-size: cover;
+    border-radius: 0 0 0 0;
+    width: 80vh;
+    height: 70vh;
+    margin: 20vh 10vh 10vh 10vh;
+    padding: 10vh 10vh 0vh 25vh;
+    justify-content: center;
+    /* border: yellowgreen 1px solid; */
+}
+
+.about-conteudo h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.about-conteudo h1 span{
+    color: var(--primary-color);
+}
+.about-conteudo h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.about-conteudo p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-conteudo .btn-caixa-about{
+    display: flex;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-caixa-about a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-caixa-about a:hover{
+    color: var(--primary-color);
+}
+    .btn-caixa-about a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: var(--terciary-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    .btn-caixa-about a:hover::before{
+        width: 100%;
+    }
 /* Title projects */
     .title-project-box{
         padding: 30px 10px 30px 10px;
@@ -438,6 +523,17 @@ nav{
         font-size: 20px;
         font-weight: 400;
         /* border: 1px solid red; */
+    }
+
+    .About-readme button{
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    cursor: pointer;
     }
 
 
